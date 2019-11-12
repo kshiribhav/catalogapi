@@ -96,14 +96,14 @@ namespace CatalogAPI
 
             app.UseSwagger();//http://localhost:60665/swagger/v1/swagger.json
 
-            if (env.IsDevelopment())
-            {
+            //if (env.IsDevelopment())
+            //{
                 app.UseSwaggerUI(options =>
                 {
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "SwaggerCatalogUI");
                     options.RoutePrefix = "";
                 });
-            }
+            //}
 
             app.UseAuthentication();
 
